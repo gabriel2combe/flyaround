@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Review
+ * review
  *
  * @ORM\Table(name="review")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ReviewRepository")
@@ -16,7 +16,7 @@ class Review
     /****** Adding personal methods / variables ******/
     public function __toString()
     {
-        // Return id Review
+        // Return id review
         return $this->id;
     }
 
