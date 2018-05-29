@@ -6,6 +6,7 @@ parameters:
     database_port:
     database_name: flyaround
     database_user:
+
     database_password:
     #You should uncomment this if you want to use pdo_sqlite
     #database_path: '%kernel.project_dir%/var/data/data.sqlite'
