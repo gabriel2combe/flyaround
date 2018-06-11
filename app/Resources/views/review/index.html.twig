@@ -14,6 +14,7 @@
                 <th>Text</th>
                 <th>Publication date</th>
                 <th>Note</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -25,10 +26,28 @@
                 <td> {{ review.text }}</td>
                 <td> {% if review.publicationDate %}{{ review.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td> {{ review.note }}</td>
-            </tr>
+                <td>
 
+                    <ul>
+                        <li>
+                            <a href="{{ path('review_show', { 'id': review.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('review_edit', { 'id': review.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+
+            </tr>
         {% endfor %}
 
         </tbody>
     </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('review_new') }}">Create a new review</a>
+        </li>
+    </ul>
+
 {% endblock %}
